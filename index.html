@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Ad Script Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Ad Script Generator</h1>
+        <div class="top-selectors">
+            <select id="corporate-entity" required></select>
+            <select id="region" required></select>
+        </div>
+        <div class="main-content">
+            <div id="product-properties" class="box">
+                <h2>Product Details</h2>
+                <div class="box-content">
+                    <a href="#" id="all-saved-products-text">All Saved Products</a>
+                    <div id="product-selection">
+                        <label for="brand">Brand<span class="mandatory">*</span></label>
+                        <input type="text" id="brand" placeholder="Select or add brand" required>
+                        <div class="version-container">
+                            <label for="brand-version">Brand Version<span class="mandatory">*</span></label>
+                            <select id="brand-version" required>
+                                <option value="">Select brand version</option>
+                            </select>
+                            <button id="brand-version-info" class="info-btn">i</button>
+                        </div>
+                        <label for="product">Product<span class="mandatory">*</span></label>
+                        <input type="text" id="product" placeholder="Select or add product" required>
+                        <div class="version-container">
+                            <label for="product-version">Product Version<span class="mandatory">*</span></label>
+                            <select id="product-version" required>
+                                <option value="">Select product version</option>
+                            </select>
+                            <button id="product-version-info" class="info-btn">i</button>
+                        </div>
+                        <label for="product-detail-name">Product Detail Name<span class="mandatory">*</span></label>
+                        <input type="text" id="product-detail-name" placeholder="Enter product detail name" required>
+                    </div>
+                    <div id="property-inputs"></div>
+                    <div class="button-container">
+                        <div class="left-button-container">
+                            <button id="cancel-btn">Cancel</button>
+                            <button id="save-btn">Save</button>
+                        </div>
+                        <button id="generate-angles-btn">Generate Angles</button>
+                    </div>
+                </div>
+            </div>
+            <div id="angles" class="box">
+                <h2>Angles <button id="generate-more-angles" class="small-btn" style="display: none;">Generate More</button></h2>
+                <div class="box-content">
+                    <!-- Angles will be dynamically generated here -->
+                </div>
+            </div>
+            <div id="scripts" class="box">
+                <h2>Scripts</h2>
+                <select id="angle-selector">
+                    <option value="">Select an angle</option>
+                </select>
+                <div class="box-content">
+                    <!-- Scripts will be dynamically generated here -->
+                </div>
+            </div>
+            <div id="variants" class="box">
+                <h2>Variants</h2>
+                <select id="variant-angle-selector">
+                    <option value="">Select an angle</option>
+                </select>
+                <select id="variant-script-selector">
+                    <option value="">Select a script</option>
+                </select>
+                <div class="box-content">
+                    <!-- Variants will be dynamically generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
